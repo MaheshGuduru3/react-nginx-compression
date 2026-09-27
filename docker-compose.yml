@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      NGINX_BROTLI: "on"
+      NGINX_BROTLI_COMP_LEVEL: "6"
